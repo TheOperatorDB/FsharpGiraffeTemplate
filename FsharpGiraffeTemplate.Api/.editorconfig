@@ -1,0 +1,3 @@
+[*.fs]
+fsharp_space_before_parameter = true
+fsharp_multiline_bracket_style = cramped

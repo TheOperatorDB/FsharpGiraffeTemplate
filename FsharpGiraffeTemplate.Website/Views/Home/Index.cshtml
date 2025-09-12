@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Ping Test";
+}
+
+<h2>Ping Test</h2>
+
+<div>
+    <button id="pingButton" class="btn btn-primary">Ping Server</button>
+    <div id="resultArea" style="margin-top: 1rem;">
+        <p id="responseText"></p>
+        <p id="errorText" style="color: red;"></p>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById('pingButton').addEventListener('click', async () => {
+            const responseElement = document.getElementById('responseText');
+            const errorElement = document.getElementById('errorText');
+
+            // Clear previous results
+            responseElement.textContent = 'Loading...';
+            errorElement.textContent = '';
+
+            try {
+                const response = await fetch('http://localhost:5000/');
+                const text = await response.text();
+                responseElement.textContent = `Response: ${text}`;
+            } catch (error) {
+                errorElement.textContent = `Error: ${error.message}`;
+                responseElement.textContent = '';
+            }
+        });
+    </script>
+}
