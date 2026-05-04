@@ -18,15 +18,6 @@ let configuration =
         .AddEnvironmentVariables()
         .Build()
 
-let configureCors (app: WebApplication) =
-    app.UseCors(fun builder ->
-        builder
-            .AllowAnyOrigin()
-            .AllowAnyHeader()
-            .AllowAnyMethod()
-        |> ignore)
-    |> ignore
-
 let configureApp (app: IApplicationBuilder) =
     app.UseCors(fun corsPolicyBuilder -> corsPolicyBuilder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod() |> ignore)
     |> ignore
