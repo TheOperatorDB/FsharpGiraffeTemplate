@@ -6,7 +6,7 @@ open Thoth.Json.Giraffe
 let getPingMessage () : HttpHandler =
     fun next ctx ->
         task {
-            let response = ThothSerializer.RespondRawJson "Hello Edelweiss Connect!"
+            let response = ThothSerializer.RespondRawJson "Hello !"
 
             return! response next ctx
         }
