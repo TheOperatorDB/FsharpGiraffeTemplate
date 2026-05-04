@@ -2,17 +2,17 @@
 
 A minimal starter template for building medium-sized web applications with F# and Giraffe. This template provides a clean foundation for rapid development while remaining lightweight and extensible.
 
-## 🚀 Features
+## Features
 
 - **Backend**: F# with Giraffe web framework
 - **Frontend**: Razor pages with Tailwind CSS
 - **Serialization**: Thoth.Json for JSON handling
 
-## 🛠️ Prerequisites
+## Prerequisites
 
 - [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
 
-## 🏗️ Architecture
+## Architecture
 
 ### Backend (FsharpGiraffeTemplate.Api)
 
@@ -29,7 +29,7 @@ The website project combines server-side rendering with modern styling:
 - **Tailwind CSS**: Utility-first CSS framework
 - **Static Assets**: Served from wwwroot directory
 
-## 🔮 What's not in that template
+## What's not in that template
 
 This template is intentionally minimal. Consider adding these features as your project grows:
 
